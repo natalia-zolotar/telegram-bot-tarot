@@ -1,8 +1,7 @@
 import os
 from dotenv import load_dotenv
 load_dotenv()  # ← теперь выполняется ПЕРЕД импортом ai_descriptions
-key = os.getenv("OPENROUTER_API_KEY")
-print(f"DEBUG OPENROUTER_API_KEY: {'SET, len=' + str(len(key)) if key else 'NOT SET'}")
+
 import telebot
 from telebot import types
 from cards import cards, get_random_one_card, get_random_three_cards
