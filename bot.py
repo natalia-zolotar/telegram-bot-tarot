@@ -1,12 +1,12 @@
 import os
 from dotenv import load_dotenv
+load_dotenv()  # ← теперь выполняется ПЕРЕД импортом ai_descriptions
 import telebot
 from telebot import types
 from cards import cards, get_random_one_card, get_random_three_cards
 from image_utils import generate_cards_image
 from ai_descriptions import generate_card_description, generate_three_cards_description
 
-load_dotenv()
 BOT_TOKEN = os.getenv("BOT_TOKEN")
 bot = telebot.TeleBot(BOT_TOKEN)
 
